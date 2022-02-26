@@ -1,0 +1,38 @@
+.sidenav {
+    height: 110%;
+    width: 20%;
+    position: absolute;
+    z-index: 0;
+    top: 44px;
+    bottom: 400px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+    margin-top: 2rem;
+  }
+  
+  .navLinkActive {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1rem;
+    /* color: #fff; */
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    color: black!important;
+    background-color: greenyellow;
+
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+  }
+
+  
