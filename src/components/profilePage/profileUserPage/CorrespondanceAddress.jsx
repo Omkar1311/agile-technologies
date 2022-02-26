@@ -19,7 +19,7 @@ function CorrespondanceAddress() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log("submit func correspondence address")
+        // console.log("submit func correspondence address")
         // alert("hello")
         setformErrors(validate(inputData));
         setisSubmit(true);
