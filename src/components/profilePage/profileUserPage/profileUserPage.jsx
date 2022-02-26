@@ -1,6 +1,6 @@
 import { Card, Button, Form, Col, Row, } from 'react-bootstrap'
 import './ProfileUserPage.css'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import CorrespondanceAddress from './CorrespondanceAddress';
 import BillingAddress from './BillingAddress';
 
@@ -26,12 +26,6 @@ function ProfileUserPage() {
         setformErrors(validate(inputData));
         setisSubmit(true);
     }
-    useEffect(() => {
-        console.log(formErrors);
-       
-    }, [formErrors]);
-
-
 
     const validate = (values) => {
         const errors = {};

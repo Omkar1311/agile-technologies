@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import BillingAddress from "../profileUserPage/BillingAddress"
 import CorrespondanceAddress from "../profileUserPage/CorrespondanceAddress"
@@ -9,29 +9,15 @@ function ProfileCompanyPage() {
         firstname: "",
         email: "",
         phoneno: "",
-        add1: "",
-        add2: "",
-        city: "",
-        state: "",
-        zip: ""
 
     });
 
     const [formErrors, setformErrors] = useState({});
-    const [isSubmit, setisSubmit] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setformErrors(validate(inputData));
-        setisSubmit(true);
     }
-    useEffect(() => {
-        console.log(formErrors);
-       
-    }, [formErrors]);
-
-
-
     const validate = (values) => {
         const errors = {};
         const regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/;
@@ -61,14 +47,7 @@ function ProfileCompanyPage() {
         } else if (values.phoneno.length > 11) {
             errors.phoneno = "Password cannot be less than 6 characters!";
         }
-        if (!values.add1) {
-            errors.add1 = "Address is Required!";
-        } else if (!regex1.test(values.add1)) {
-            errors.add1 = "Address should be Alphabet!";
-        } else if (values.add1.length > 6) {
-            errors.add1 = "Address should be less than 6 characters";
-        }
-
+        
         return errors;
     }
 
@@ -133,12 +112,9 @@ function ProfileCompanyPage() {
                         </Col>
                     </Row>
                 </Card>
-                {/* <Card className='container w-100'> */}
-
                 <CorrespondanceAddress />
                 <BillingAddress/>
 
-                {/* </Card> */}
             </Form>
 
            
