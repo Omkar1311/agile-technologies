@@ -22,20 +22,20 @@ function ProfileCompanyPage() {
         const errors = {};
         const regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/;
         const regex1 = /^[a-zA-Z]/
-        if (!values.lastname) {
-            errors.lastname = "Last Name is Required!";
-        } else if (!regex1.test(values.lastname)) {
-            errors.lastname = "Last Name should be Alphabet!";
+        if (!values.companyname) {
+            errors.companyname = "Company Name is Required!";
+        } else if (!regex1.test(values.companyname)) {
+            errors.companyname = "Company Name should be Alphabet!";
         }
-        else if (values.lastname.length > 12) {
-            errors.lastname = "Last Name should be less than 12 characters";
+        else if (values.companyname.length > 12) {
+            errors.companyname = "Company Name should be less than 12 characters";
         }
-        if (!values.firstname) {
-            errors.firstname = "First name is Required!";
-        } else if (!regex1.test(values.firstname)) {
-            errors.firstname = "First name should be Alphabet!";
-        } else if (values.firstname.length > 6) {
-            errors.firstname = "First name should be less than 6 characters";
+        if (!values.contactname) {
+            errors.contactname = "Contact name is Required!";
+        } else if (!regex1.test(values.contactname)) {
+            errors.contactname = "Contact should be Alphabet!";
+        } else if (values.contactname.length > 6) {
+            errors.contactname = "Contact should be less than 6 characters";
         }
         if (!values.email) {
             errors.email = "Email is Required!"
@@ -64,26 +64,26 @@ function ProfileCompanyPage() {
                     <Row className='mb-4'>
                         <Col>
                             <Form.Group controlId="exampleForm.ControlInput1">
-                                <Form.Control type="text" placeholder="Last Name"
-                                    name='lastname'
-                                    value={inputData.lastname}
+                                <Form.Control type="text" placeholder="Company name"
+                                    name='companyname'
+                                    value={inputData.companyname}
                                     onChange={(e) => {
-                                        setinputData({ ...inputData, lastname: e.target.value })
+                                        setinputData({ ...inputData, companyname: e.target.value })
                                     }}
                                 />
-                                <p className='text-danger'>{formErrors.lastname}</p>
+                                <p className='text-danger'>{formErrors.companyname}</p>
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group controlId="exampleForm.ControlInput2">
-                                <Form.Control type="text" placeholder="First Name"
-                                    name='firstname'
-                                    value={inputData.firstname}
+                                <Form.Control type="text" placeholder="Contact name"
+                                    name='contactname'
+                                    value={inputData.contactname}
                                     onChange={(e) => {
-                                        setinputData({ ...inputData, firstname: e.target.value })
+                                        setinputData({ ...inputData, contactname: e.target.value })
                                     }}
                                 />
-                                <p className='text-danger'>{formErrors.firstname}</p>
+                                <p className='text-danger'>{formErrors.contactname}</p>
                             </Form.Group>
                         </Col>
                         <Col>

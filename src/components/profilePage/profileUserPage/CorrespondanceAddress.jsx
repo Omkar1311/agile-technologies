@@ -19,8 +19,7 @@ function CorrespondanceAddress() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // console.log("submit func correspondence address")
-        // alert("hello")
+        
         setformErrors(validate(inputData));
         setisSubmit(true);
     }
@@ -98,7 +97,7 @@ function CorrespondanceAddress() {
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridCity">
                             <Form.Label>Address 2</Form.Label>
-                            <Form.Control type="text" placeholder="first address"
+                            <Form.Control type="text" placeholder="Second address"
                                 name='address'
                                 value={inputData.add2}
                                 onChange={(e) => {
@@ -108,8 +107,8 @@ function CorrespondanceAddress() {
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridCity">
                             <Form.Label>City</Form.Label>
-                            <Form.Control type="text" placeholder="first address"
-                                name='address'
+                            <Form.Control type="text" placeholder="City"
+                                name='city'
                                 value={inputData.city}
                                 onChange={(e) => {
                                     setinputData({ ...inputData, city: e.target.value })
@@ -119,8 +118,8 @@ function CorrespondanceAddress() {
 
                         <Form.Group as={Col} controlId="formGridState">
                             <Form.Label>State</Form.Label>
-                            <Form.Control type="text" placeholder="first address"
-                                name='address'
+                            <Form.Control type="text" placeholder="State"
+                                name='state'
                                 value={inputData.state}
                                 onChange={(e) => {
                                     setinputData({ ...inputData, state: e.target.value })
@@ -130,8 +129,8 @@ function CorrespondanceAddress() {
 
                         <Form.Group as={Col} controlId="formGridZip">
                             <Form.Label>Zip</Form.Label>
-                            <Form.Control type="number" placeholder="first address"
-                                name='address'
+                            <Form.Control type="number" placeholder="zip"
+                                name='zip'
                                 value={inputData.zip}
                                 onChange={(e) => {
                                     setinputData({ ...inputData, zip: e.target.value })

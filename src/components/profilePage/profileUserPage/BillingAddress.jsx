@@ -84,7 +84,7 @@ function BillingAddress() {
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Address 1</Form.Label>
                     <Form.Control type="text" placeholder="first address"
-                        name='address'
+                        name='addOne'
                         value={inputData.add1}
                         onChange={(e) => {
                             setinputData({ ...inputData, add1: e.target.value })
@@ -94,8 +94,8 @@ function BillingAddress() {
                 </Form.Group>
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Address 2</Form.Label>
-                    <Form.Control type="text" placeholder="first address"
-                        name='address'
+                    <Form.Control type="text" placeholder="second address"
+                        name='addTwo'
                         value={inputData.add2}
                         onChange={(e) => {
                             setinputData({ ...inputData, add2: e.target.value })
@@ -104,8 +104,8 @@ function BillingAddress() {
                 </Form.Group>
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>City</Form.Label>
-                    <Form.Control type="text" placeholder="first address"
-                        name='address'
+                    <Form.Control type="text" placeholder="city"
+                        name='city'
                         value={inputData.city}
                         onChange={(e) => {
                             setinputData({ ...inputData, city: e.target.value })
@@ -115,8 +115,8 @@ function BillingAddress() {
 
                 <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>State</Form.Label>
-                    <Form.Control type="text" placeholder="first address"
-                        name='address'
+                    <Form.Control type="text" placeholder="state"
+                        name='state'
                         value={inputData.state}
                         onChange={(e) => {
                             setinputData({ ...inputData, state: e.target.value })
@@ -126,8 +126,8 @@ function BillingAddress() {
 
                 <Form.Group as={Col} controlId="formGridZip">
                     <Form.Label>Zip</Form.Label>
-                    <Form.Control type="number" placeholder="first address"
-                        name='address'
+                    <Form.Control type="number" placeholder="zip"
+                        name='zip'
                         value={inputData.zip}
                         onChange={(e) => {
                             setinputData({ ...inputData, zip: e.target.value })
@@ -135,10 +135,10 @@ function BillingAddress() {
                     <p className='text-danger'>{formErrors.zip}</p>
                 </Form.Group>
             </Row>
-            {/* </Form> */}
+        
 
         </Card>
-        // </Form>
+     
     )
 }
 
