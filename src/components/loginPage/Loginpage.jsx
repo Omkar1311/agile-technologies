@@ -19,7 +19,7 @@ function Loginpage(props) {
               } else if (
                 !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
               ) {
-                errors.email = <div style={{color:'red'}}>'*Invalid user name address';</div>
+                errors.email = <div style={{color:'red'}}>'*Invalid user name';</div>
               } else if (!values.password) {
                 errors.password = <div style={{color:'red'}}>'Required';</div>
               } else if (
