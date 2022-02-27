@@ -1,9 +1,8 @@
 
 import { Button, Card, Form } from 'react-bootstrap'
 import { Formik } from 'formik';
-import { Link } from 'react-router-dom'
 
-function Loginpage(props) {
+function CreateAccount(props) {
 
 
   return (
@@ -32,7 +31,7 @@ function Loginpage(props) {
             }}
             onSubmit={(values, { setSubmitting }) => {
               setTimeout(() => {
-                props.history.push('/mainNavigationPage/profilePageUser')
+                props.history.push('/')
                 setSubmitting(false);
               }, 400);
             }}
@@ -74,12 +73,11 @@ function Loginpage(props) {
                 </Form.Group>
                 {errors.password && touched.password && errors.password}
                 <Button className='container d-flex justify-content-center mt-5 w-50'
-                  variant="success"
+                  variant="primary"
                   type="submit" disabled={isSubmitting}
                 >
-                  Log In
+                  Create Account
                 </Button>
-                <Link to='/createaccount'  >Create Account</Link>
 
 
               </Form>
@@ -93,4 +91,4 @@ function Loginpage(props) {
 
   );
 }
-export default Loginpage
+export default CreateAccount

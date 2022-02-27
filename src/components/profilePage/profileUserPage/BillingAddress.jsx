@@ -81,7 +81,7 @@ function BillingAddress() {
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Address 1</Form.Label>
-                    <Form.Control type="text" placeholder="first address"
+                    <Form.Control type="text" placeholder="address"
                         name='addOne'
                         value={inputData.add1}
                         onChange={(e) => {
@@ -92,7 +92,7 @@ function BillingAddress() {
                 </Form.Group>
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Address 2</Form.Label>
-                    <Form.Control type="text" placeholder="second address"
+                    <Form.Control type="text" placeholder="address"
                         name='addTwo'
                         value={inputData.add2}
                         onChange={(e) => {

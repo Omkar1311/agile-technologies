@@ -1,6 +1,5 @@
 import { Card, Button, Form, Col, Row, } from 'react-bootstrap'
 import './ProfileUserPage.css'
-// import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 function CorrespondanceAddress() {
@@ -86,7 +85,7 @@ function CorrespondanceAddress() {
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridCity">
                             <Form.Label>Address 1</Form.Label>
-                            <Form.Control type="text" placeholder="first address"
+                            <Form.Control type="text" placeholder="address"
                                 name='address'
                                 value={inputData.add1}
                                 onChange={(e) => {
@@ -97,7 +96,7 @@ function CorrespondanceAddress() {
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridCity">
                             <Form.Label>Address 2</Form.Label>
-                            <Form.Control type="text" placeholder="Second address"
+                            <Form.Control type="text" placeholder="address"
                                 name='address'
                                 value={inputData.add2}
                                 onChange={(e) => {
