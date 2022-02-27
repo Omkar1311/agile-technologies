@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import BillingAddress from "../profileUserPage/BillingAddress"
 import CorrespondanceAddress from "../profileUserPage/CorrespondanceAddress"
+import './ProfileCompanyPage.css'
+
 
 function ProfileCompanyPage() {
     const [inputData, setinputData] = useState({
@@ -58,12 +60,11 @@ function ProfileCompanyPage() {
          <Form className='form' onSubmit={handleSubmit}>
                 <Card className='container w-100 '>
                     <div className='d-flex justify-content-end '>
-                        {/* <h3 className='container '>User Personal Info </h3> */}
-                        <Button className='btn btn-dark my-2' type="submit"   >Submit</Button>
+                        <Button className='btn btn-dark my-2' type="submit">Submit</Button>
                     </div><br></br>
-                    <Row className='mb-4'>
-                        <Col>
-                            <Form.Group controlId="exampleForm.ControlInput1">
+                    <Row className='companyInfo'>
+                        <Col  className="item">
+                            <Form.Group controlId="exampleForm.ControlInput1" >
                                 <Form.Control type="text" placeholder="Company name"
                                     name='companyname'
                                     value={inputData.companyname}
@@ -74,9 +75,9 @@ function ProfileCompanyPage() {
                                 <p className='text-danger'>{formErrors.companyname}</p>
                             </Form.Group>
                         </Col>
-                        <Col>
-                            <Form.Group controlId="exampleForm.ControlInput2">
-                                <Form.Control type="text" placeholder="Contact name"
+                        <Col className="item">
+                            <Form.Group controlId="exampleForm.ControlInput2" >
+                                <Form.Control type="text"  placeholder="Contact name"
                                     name='contactname'
                                     value={inputData.contactname}
                                     onChange={(e) => {
@@ -86,8 +87,8 @@ function ProfileCompanyPage() {
                                 <p className='text-danger'>{formErrors.contactname}</p>
                             </Form.Group>
                         </Col>
-                        <Col>
-                            <Form.Group controlId="exampleForm.ControlInput3">
+                        <Col  className="item">
+                            <Form.Group controlId="exampleForm.ControlInput3" >
                                 <Form.Control type="email" placeholder="Email"
                                     name='email'
                                     value={inputData.email}
@@ -98,8 +99,8 @@ function ProfileCompanyPage() {
                                 <p className='text-danger'>{formErrors.email}</p>
                             </Form.Group>
                         </Col>
-                        <Col>
-                            <Form.Group controlId="exampleForm.ControlInput4">
+                        <Col className="item">
+                            <Form.Group controlId="exampleForm.ControlInput4" >
                                 <Form.Control type="number" placeholder="Phone no"
                                     name='phoneno'
                                     value={inputData.phoneno}

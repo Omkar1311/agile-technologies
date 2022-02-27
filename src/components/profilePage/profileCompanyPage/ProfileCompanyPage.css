@@ -1,0 +1,7 @@
+.companyInfo{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    flex: 1 1 150px;
+}

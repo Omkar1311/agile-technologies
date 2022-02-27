@@ -7,7 +7,7 @@ function CreateAccount(props) {
 
   return (
 
-    <div className='container my-5 w-25 '>
+    <div className='d-flex justify-content-center my-5 '>
       <Card className='mainCard'>
         <Card.Body>
           <Formik

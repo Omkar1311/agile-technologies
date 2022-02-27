@@ -4,3 +4,10 @@
     
     left: 20%;
   }
+  .userInfo{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item{
+    flex: 1 1 150px;
+  }

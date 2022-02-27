@@ -79,8 +79,8 @@ function CorrespondanceAddress() {
                         <Button className='btn btn-dark' onClick={handleSubmit}>Submit</Button>
 
                     </div>
-                    <Row className="mb-3">
-                        <Form.Group as={Col} controlId="formGridCity">
+                    <Row className="corrAdd">
+                        <Form.Group as={Col} controlId="formGridCity" className='item'>
                             <Form.Label>Address 1</Form.Label>
                             <Form.Control type="text" placeholder="address"
                                 name='address'
@@ -91,7 +91,7 @@ function CorrespondanceAddress() {
                             />
                             <p className='text-danger'>{formErrors.add1}</p>
                         </Form.Group>
-                        <Form.Group as={Col} controlId="formGridCity">
+                        <Form.Group as={Col} controlId="formGridCity" className='item'>
                             <Form.Label>Address 2</Form.Label>
                             <Form.Control type="text" placeholder="address"
                                 name='address'
@@ -101,7 +101,7 @@ function CorrespondanceAddress() {
                                 }} />
                             <p className='text-danger'>{formErrors.add2}</p>
                         </Form.Group>
-                        <Form.Group as={Col} controlId="formGridCity">
+                        <Form.Group as={Col} controlId="formGridCity" className='item'>
                             <Form.Label>City</Form.Label>
                             <Form.Control type="text" placeholder="City"
                                 name='city'
@@ -112,7 +112,7 @@ function CorrespondanceAddress() {
                             <p className='text-danger'>{formErrors.city}</p>
                         </Form.Group>
 
-                        <Form.Group as={Col} controlId="formGridState">
+                        <Form.Group as={Col} controlId="formGridState" className='item'>
                             <Form.Label>State</Form.Label>
                             <Form.Control type="text" placeholder="State"
                                 name='state'
@@ -123,7 +123,7 @@ function CorrespondanceAddress() {
                             <p className='text-danger'>{formErrors.state}</p>
                         </Form.Group>
 
-                        <Form.Group as={Col} controlId="formGridZip">
+                        <Form.Group as={Col} controlId="formGridZip" className='item'>
                             <Form.Label>Zip</Form.Label>
                             <Form.Control type="number" placeholder="zip"
                                 name='zip'

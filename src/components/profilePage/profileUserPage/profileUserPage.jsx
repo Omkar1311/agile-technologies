@@ -66,8 +66,8 @@ function ProfileUserPage() {
                         <h3 className='container '>User Personal Info </h3>
                         <Button className='btn btn-dark my-2' type="submit"   >Submit</Button>
                     </div><br></br>
-                    <Row className='mb-4'>
-                        <Col>
+                    <Row className='userInfo'>
+                        <Col className='item'>
                             <Form.Group controlId="exampleForm.ControlInput1">
                                 <Form.Control type="text" placeholder="Last Name"
                                     name='lastname'
@@ -79,7 +79,7 @@ function ProfileUserPage() {
                                 <p className='text-danger'>{formErrors.lastname}</p>
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col className='item'>
                             <Form.Group controlId="exampleForm.ControlInput2">
                                 <Form.Control type="text" placeholder="First Name"
                                     name='firstname'
@@ -91,7 +91,7 @@ function ProfileUserPage() {
                                 <p className='text-danger'>{formErrors.firstname}</p>
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col className='item'>
                             <Form.Group controlId="exampleForm.ControlInput3">
                                 <Form.Control type="email" placeholder="Email"
                                     name='email'
@@ -103,7 +103,7 @@ function ProfileUserPage() {
                                 <p className='text-danger'>{formErrors.email}</p>
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col className='item'>
                             <Form.Group controlId="exampleForm.ControlInput4">
                                 <Form.Control type="number" placeholder="Phone no"
                                     name='phoneno'
