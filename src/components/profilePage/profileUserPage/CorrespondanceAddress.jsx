@@ -13,18 +13,16 @@ function CorrespondanceAddress() {
     });
 
     const [formErrors, setformErrors] = useState({});
-    const [isSubmit, setisSubmit] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         
         setformErrors(validate(inputData));
-        setisSubmit(true);
     }
     useEffect(() => {
         
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
+        if (Object.keys(formErrors).length === 0 ) {
         }
     }, [formErrors]);
 
@@ -75,7 +73,6 @@ function CorrespondanceAddress() {
       
 
             <Card className='container w-100'>
-                {/* <Form className='form'> */}
                     <h3 className='container '>Correspondance Address
                     </h3>
                     <div className='d-flex justify-content-end'>
@@ -137,7 +134,6 @@ function CorrespondanceAddress() {
                             <p className='text-danger'>{formErrors.zip}</p>
                         </Form.Group>
                     </Row>
-                {/* </Form> */}
 
             </Card>
     )
