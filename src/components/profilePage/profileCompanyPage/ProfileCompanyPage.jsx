@@ -43,9 +43,9 @@ function ProfileCompanyPage() {
             errors.email = "Enter a valid email id!";
         }
         if (!values.phoneno) {
-            errors.phoneno = "Password is Required!";
+            errors.phoneno = "Phone no is Required!";
         } else if (values.phoneno.length > 11) {
-            errors.phoneno = "Password cannot be less than 6 characters!";
+            errors.phoneno = "Phone no cannot be less than 6 characters!";
         }
         
         return errors;

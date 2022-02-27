@@ -19,12 +19,10 @@ function ProfileUserPage() {
     });
 
     const [formErrors, setformErrors] = useState({});
-    const [isSubmit, setisSubmit] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setformErrors(validate(inputData));
-        setisSubmit(true);
     }
 
     const validate = (values) => {
@@ -52,17 +50,11 @@ function ProfileUserPage() {
             errors.email = "Enter a valid email id!";
         }
         if (!values.phoneno) {
-            errors.phoneno = "Password is Required!";
+            errors.phoneno = "Phone no is Required!";
         } else if (values.phoneno.length > 11) {
-            errors.phoneno = "Password cannot be less than 6 characters!";
+            errors.phoneno = "Phone no cannot be less than 6 characters!";
         }
-        if (!values.add1) {
-            errors.add1 = "Address is Required!";
-        } else if (!regex1.test(values.add1)) {
-            errors.add1 = "Address should be Alphabet!";
-        } else if (values.add1.length > 6) {
-            errors.add1 = "Address should be less than 6 characters";
-        }
+
 
         return errors;
     }
@@ -125,12 +117,10 @@ function ProfileUserPage() {
                         </Col>
                     </Row>
                 </Card>
-                {/* <Card className='container w-100'> */}
 
                 <CorrespondanceAddress />
-                <BillingAddress/>
+                <BillingAddress />
 
-                {/* </Card> */}
             </Form>
         </div>
     )

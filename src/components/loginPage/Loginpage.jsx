@@ -19,13 +19,13 @@ function Loginpage(props) {
               } else if (
                 !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
               ) {
-                errors.email = <div style={{color:'red'}}>'!! Invalid email address';</div>
+                errors.email = <div style={{color:'red'}}>'*Invalid user name address';</div>
               } else if (!values.password) {
                 errors.password = <div style={{color:'red'}}>'Required';</div>
               } else if (
                 ! /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/i.test(values.password)
               ) {
-                errors.password = <div style={{color:'red'}}>'!!! *Invalid password'</div>
+                errors.password = <div style={{color:'red'}}>'*Invalid password'</div>
               }
               return errors;
             }}
@@ -50,6 +50,7 @@ function Loginpage(props) {
                   <Form.Label className='container d-flex justify-content-start' name='userName'>User Name</Form.Label>
                   <Form.Control className='bg-light'
                     type="email"
+                    placeholder='username'
                     name="email"
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -64,6 +65,7 @@ function Loginpage(props) {
                     className='bg-light'
                     type="password"
                     name="password"
+                    placeholder='password'
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.password}

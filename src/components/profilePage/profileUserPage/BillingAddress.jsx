@@ -14,15 +14,13 @@ function BillingAddress() {
     });
 
     const [formErrors, setformErrors] = useState({});
-    const [isSubmit, setisSubmit] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setformErrors(validate(inputData));
-        setisSubmit(true);
     }
     useEffect(() => {
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
+        if (Object.keys(formErrors).length === 0 ) {
         }
     }, [formErrors]);
 
