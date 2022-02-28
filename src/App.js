@@ -17,7 +17,7 @@ function App() {
 
       <Router>
         <Route exact path='/' component={Loginpage} />
-        
+
         <Route path='/mainNavigationPage' component={MainNavigationPage} />
         <Route path='/createaccount' component={CreateAccount} />
         <Route path='/mainNavigationPage/profilePageUser' component={ProfileUserPage} />

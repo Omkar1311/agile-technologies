@@ -1,9 +1,7 @@
-
 import { Button, Card, Form } from 'react-bootstrap'
 import { Formik } from 'formik';
 
 function CreateAccount(props) {
-
 
   return (
 
@@ -25,7 +23,7 @@ function CreateAccount(props) {
               } else if (
                 ! /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/i.test(values.password)
               ) {
-                errors.password = <div style={{ color: 'red' }}>'*Password should contain numbers 0-9, the alphabet (A-Z), and several special symbols'</div>
+                errors.password = <div style={{ color: 'red' }}>'*Password should contain numbers 0-9, the alphabet (A-Z, a-z), and several special symbols'</div>
               }
               return errors;
             }}
@@ -87,8 +85,6 @@ function CreateAccount(props) {
       </Card>
 
     </div>
-
-
   );
 }
 export default CreateAccount

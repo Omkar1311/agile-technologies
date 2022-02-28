@@ -1,9 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Sidebar.css'
-
-
-
 function Sidebar() {
   return (
     <>
@@ -15,12 +12,10 @@ function Sidebar() {
           <NavLink to='/mainNavigationPage/agencyOrBrokerPage' activeClassName='navLinkActive' >Agency Or Broker Page</NavLink>
           <NavLink to='/mainNavigationPage/brokerBussinessPage' activeClassName='navLinkActive' > Broker Bussiness Page</NavLink>
         </div>
-        <div>
-          
+        <div>          
         </div>
       </div>
     </>
-
   )
 }
 

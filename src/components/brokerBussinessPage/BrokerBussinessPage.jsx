@@ -80,15 +80,11 @@ function BrokerBussinessPage() {
 
                 </tr>
               )
-
             })}
-
           </tbody>
         </Table>
       </div>
     </div>
-
-
   )
 }
 

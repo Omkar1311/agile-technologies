@@ -1,6 +1,5 @@
 import { Card, Button, Form, Col, Row, } from 'react-bootstrap'
 import './ProfileUserPage.css'
-
 import { useEffect, useState } from 'react';
 
 function BillingAddress() {
@@ -12,7 +11,6 @@ function BillingAddress() {
         zip: ""
 
     });
-
     const [formErrors, setformErrors] = useState({});
 
     const handleSubmit = (e) => {
@@ -23,9 +21,6 @@ function BillingAddress() {
         if (Object.keys(formErrors).length === 0 ) {
         }
     }, [formErrors]);
-
-
-
     const validate = (values) => {
         const errors = {};
         const regex1 = /^[a-zA-Z]/
@@ -63,15 +58,10 @@ function BillingAddress() {
         } else if (values.zip.length > 6) {
             errors.zip = "zip cannot be less than 6 characters!";
         }
-
-
         return errors;
     }
-    return (
-        // <Form >
-
-        <Card className='container w-100'>
-            {/* <Form className='form'> */}
+    return ( 
+        <Card className='container w-100'>            
             <h3 className='container '>Billing Address
             </h3>
             <div className='d-flex justify-content-end'>
@@ -133,10 +123,7 @@ function BillingAddress() {
                     <p className='text-danger'>{formErrors.zip}</p>
                 </Form.Group>
             </Row>
-        
-
-        </Card>
-     
+        </Card>     
     )
 }
 

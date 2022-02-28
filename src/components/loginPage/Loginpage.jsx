@@ -1,14 +1,9 @@
-
 import { Button, Card, Form } from 'react-bootstrap'
 import { Formik } from 'formik';
 import { Link } from 'react-router-dom'
 
 function Loginpage(props) {
-
-
   return (
-
-
     <div className='d-flex justify-content-center my-5 '>
       <Card className='mainCard'>
         <Card.Body>
@@ -81,17 +76,12 @@ function Loginpage(props) {
                   Log In
                 </Button>
                 <Link to='/createaccount'  >Create Account</Link>
-
-
               </Form>
             )}
           </Formik>
         </Card.Body>
       </Card>
-
     </div>
-
-
   );
 }
 export default Loginpage

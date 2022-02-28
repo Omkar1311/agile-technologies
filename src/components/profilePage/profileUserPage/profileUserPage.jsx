@@ -9,22 +9,15 @@ function ProfileUserPage() {
         lastname: "",
         firstname: "",
         email: "",
-        phoneno: "",
-        add1: "",
-        add2: "",
-        city: "",
-        state: "",
-        zip: ""
+        phoneno: "",      
 
     });
 
     const [formErrors, setformErrors] = useState({});
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setformErrors(validate(inputData));
     }
-
     const validate = (values) => {
         const errors = {};
         const regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/;
@@ -54,8 +47,6 @@ function ProfileUserPage() {
         } else if (values.phoneno.length > 11) {
             errors.phoneno = "Phone no cannot be less than 6 characters!";
         }
-
-
         return errors;
     }
     return (
@@ -117,10 +108,8 @@ function ProfileUserPage() {
                         </Col>
                     </Row>
                 </Card>
-
                 <CorrespondanceAddress />
                 <BillingAddress />
-
             </Form>
         </div>
     )

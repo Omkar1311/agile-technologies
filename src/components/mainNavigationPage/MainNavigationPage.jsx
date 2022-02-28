@@ -11,5 +11,4 @@ function MainNavigationPage() {
     </div>
   )
 }
-
 export default MainNavigationPage

@@ -55,7 +55,6 @@ function AgencyOrBrokerPage() {
 
   return (
     <div>
-
       <div className='section w-75 mt-5'>
         <h3>Agency Page</h3>
 
@@ -78,12 +77,8 @@ function AgencyOrBrokerPage() {
                   <td>{e.coOrdinate}</td>
 
                 </tr>
-
-
               )
-
             })}
-
           </tbody>
         </Table>
       </div>

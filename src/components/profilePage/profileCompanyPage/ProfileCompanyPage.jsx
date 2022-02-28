@@ -4,7 +4,6 @@ import BillingAddress from "../profileUserPage/BillingAddress"
 import CorrespondanceAddress from "../profileUserPage/CorrespondanceAddress"
 import './ProfileCompanyPage.css'
 
-
 function ProfileCompanyPage() {
     const [inputData, setinputData] = useState({
         lastname: "",
@@ -52,9 +51,6 @@ function ProfileCompanyPage() {
         
         return errors;
     }
-
-
-   
        return (
         <div className='section'>
          <Form className='form' onSubmit={handleSubmit}>
@@ -115,10 +111,7 @@ function ProfileCompanyPage() {
                 </Card>
                 <CorrespondanceAddress />
                 <BillingAddress/>
-
-            </Form>
-
-           
+            </Form>           
         </div>
     )
 }

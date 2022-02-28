@@ -87,15 +87,10 @@ function CustomerListPage() {
                 </tr>
 
               )
-
-
             })}
-
           </tbody>
         </Table>
       </div>
-
-
     </div>
   )
 }
