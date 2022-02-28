@@ -90,7 +90,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, mr: "1vh" }}>
-            Agile HealthCare
+            Agile HealthTech
           </Typography>
           <Typography variant="h6" noWrap component="div">
             <Link to='/' className='logout' >Log Out</Link>
