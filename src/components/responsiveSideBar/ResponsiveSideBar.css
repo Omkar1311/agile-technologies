@@ -1,0 +1,37 @@
+.hamburger a{
+    text-decoration: none;
+    color: white;
+    margin:5px 0 -10px 2vh;
+}
+.hamburger{
+    background-color: black;
+}
+.logout {
+    float: right;
+    text-align: center;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-size: 17px;
+    border: 0px;
+    padding: 10px 15px ;
+    background-color: rgb(223, 26, 26);
+    color: white;
+    border-radius: 2px;
+  }
+  
+  .logout:hover {
+    background-color: rgb(47, 0, 255);
+    color: white;
+
+  }
+  .navLinkActive {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    color: black!important;
+    background-color: greenyellow;
+
+  }

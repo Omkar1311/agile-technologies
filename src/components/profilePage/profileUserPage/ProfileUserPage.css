@@ -1,9 +1,6 @@
-.section{
-
-    position: absolute;
-    
-    left: 20%;
-  }
+.form{
+  margin-left: -19vw;
+}
   .userInfo{
     display: flex;
     flex-wrap: wrap;

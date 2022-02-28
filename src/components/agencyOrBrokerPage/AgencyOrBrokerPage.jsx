@@ -1,5 +1,6 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
+import './agency.css'
 
 function AgencyOrBrokerPage() {
   const agencyData = [
@@ -55,7 +56,7 @@ function AgencyOrBrokerPage() {
 
   return (
     <div>
-      <div className='section w-75 mt-5'>
+      <div className='table'>
         <h3>Agency Page</h3>
 
         <Table striped bordered hover>

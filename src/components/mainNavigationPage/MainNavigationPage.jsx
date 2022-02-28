@@ -1,13 +1,11 @@
 import React from 'react'
-import NavigationBar from '../navbar/NavigationBar'
-import Sidebar from '../sidebar/Sidebar'
+import ResponsiveDrawer from '../responsiveSideBar/ResponsveSideBar'
 import './MainNavigationPage.css'
 
 function MainNavigationPage() {
   return (
     <div>
-        <NavigationBar/>
-        <Sidebar/>
+      <ResponsiveDrawer />
     </div>
   )
 }

@@ -12,6 +12,7 @@ function ProfileCompanyPage() {
         phoneno: "",
 
     });
+    
 
     const [formErrors, setformErrors] = useState({});
 
@@ -48,18 +49,18 @@ function ProfileCompanyPage() {
         } else if (values.phoneno.length > 11) {
             errors.phoneno = "Phone no cannot be less than 6 characters!";
         }
-        
+
         return errors;
     }
-       return (
+    return (
         <div className='section'>
-         <Form className='form' onSubmit={handleSubmit}>
+            <Form className='form' onSubmit={handleSubmit}>
                 <Card className='container w-100 '>
                     <div className='d-flex justify-content-end '>
                         <Button className='btn btn-dark my-2' type="submit">Submit</Button>
                     </div><br></br>
                     <Row className='companyInfo'>
-                        <Col  className="item">
+                        <Col className="item">
                             <Form.Group controlId="exampleForm.ControlInput1" >
                                 <Form.Control type="text" placeholder="Company name"
                                     name='companyname'
@@ -73,7 +74,7 @@ function ProfileCompanyPage() {
                         </Col>
                         <Col className="item">
                             <Form.Group controlId="exampleForm.ControlInput2" >
-                                <Form.Control type="text"  placeholder="Contact name"
+                                <Form.Control type="text" placeholder="Contact name"
                                     name='contactname'
                                     value={inputData.contactname}
                                     onChange={(e) => {
@@ -83,7 +84,7 @@ function ProfileCompanyPage() {
                                 <p className='text-danger'>{formErrors.contactname}</p>
                             </Form.Group>
                         </Col>
-                        <Col  className="item">
+                        <Col className="item">
                             <Form.Group controlId="exampleForm.ControlInput3" >
                                 <Form.Control type="email" placeholder="Email"
                                     name='email'
@@ -110,8 +111,8 @@ function ProfileCompanyPage() {
                     </Row>
                 </Card>
                 <CorrespondanceAddress />
-                <BillingAddress/>
-            </Form>           
+                <BillingAddress />
+            </Form>
         </div>
     )
 }

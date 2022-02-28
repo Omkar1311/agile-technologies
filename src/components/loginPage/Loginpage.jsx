@@ -1,12 +1,11 @@
 import { Button, Card, Form } from 'react-bootstrap'
 import { Formik } from 'formik';
-import { Link } from 'react-router-dom'
 
 function Loginpage(props) {
   return (
     <div className='d-flex justify-content-center my-5 '>
-      <Card className='mainCard'>
-        <Card.Body>
+      <Card>
+        <Card.Body style={{width:'300px'}}>
           <Formik
             initialValues={{ email: '', password: '' }}
             validate={values => {
@@ -22,7 +21,7 @@ function Loginpage(props) {
               } else if (
                 ! /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/i.test(values.password)
               ) {
-                errors.password = <div style={{ color: 'red' }}>'*Password should contain numbers 0-9, the alphabet (A-Z), and several special symbols'</div>
+                errors.password = <div style={{ color: 'red' }}>'*Password should be alphanumeric ,min 6 char, max 16 char'</div>
               }
               return errors;
             }}
@@ -75,7 +74,6 @@ function Loginpage(props) {
                 >
                   Log In
                 </Button>
-                <Link to='/createaccount'  >Create Account</Link>
               </Form>
             )}
           </Formik>

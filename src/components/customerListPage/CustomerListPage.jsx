@@ -1,5 +1,6 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
+import './CustomerListPage.css'
 
 function CustomerListPage() {
   const customerData = [
@@ -63,9 +64,9 @@ function CustomerListPage() {
   return (
     <div>
 
-      <div className='section w-75 mt-5'>
-      <h3>Cuctomer List Page</h3>
-        <Table striped bordered hover>
+      <div className='table' >
+      <h3>Customer List Page</h3>
+        <Table striped bordered hover >
           <thead>
             <tr>
               <th>Entity Type</th>

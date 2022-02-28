@@ -18,7 +18,7 @@ function BillingAddress() {
         setformErrors(validate(inputData));
     }
     useEffect(() => {
-        if (Object.keys(formErrors).length === 0 ) {
+        if (Object.keys(formErrors).length === 0) {
         }
     }, [formErrors]);
     const validate = (values) => {
@@ -60,8 +60,8 @@ function BillingAddress() {
         }
         return errors;
     }
-    return ( 
-        <Card className='container w-100'>            
+    return (
+        <Card className='container w-100'>
             <h3 className='container '>Billing Address
             </h3>
             <div className='d-flex justify-content-end'>
@@ -123,7 +123,7 @@ function BillingAddress() {
                     <p className='text-danger'>{formErrors.zip}</p>
                 </Form.Group>
             </Row>
-        </Card>     
+        </Card>
     )
 }
 

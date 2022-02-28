@@ -17,12 +17,12 @@ function CorrespondanceAddress() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        
+
         setformErrors(validate(inputData));
     }
     useEffect(() => {
-        
-        if (Object.keys(formErrors).length === 0 ) {
+
+        if (Object.keys(formErrors).length === 0) {
         }
     }, [formErrors]);
 
@@ -70,72 +70,72 @@ function CorrespondanceAddress() {
         return errors;
     }
     return (
-      
 
-            <Card className='container w-100'>
-                    <h3 className='container '>Correspondance Address
-                    </h3>
-                    <div className='d-flex justify-content-end'>
-                        <Button className='btn btn-dark' onClick={handleSubmit}>Submit</Button>
 
-                    </div>
-                    <Row className="corrAdd">
-                        <Form.Group as={Col} controlId="formGridCity" className='item'>
-                            <Form.Label>Address 1</Form.Label>
-                            <Form.Control type="text" placeholder="address"
-                                name='address'
-                                value={inputData.add1}
-                                onChange={(e) => {
-                                    setinputData({ ...inputData, add1: e.target.value })
-                                }}
-                            />
-                            <p className='text-danger'>{formErrors.add1}</p>
-                        </Form.Group>
-                        <Form.Group as={Col} controlId="formGridCity" className='item'>
-                            <Form.Label>Address 2</Form.Label>
-                            <Form.Control type="text" placeholder="address"
-                                name='address'
-                                value={inputData.add2}
-                                onChange={(e) => {
-                                    setinputData({ ...inputData, add2: e.target.value })
-                                }} />
-                            <p className='text-danger'>{formErrors.add2}</p>
-                        </Form.Group>
-                        <Form.Group as={Col} controlId="formGridCity" className='item'>
-                            <Form.Label>City</Form.Label>
-                            <Form.Control type="text" placeholder="City"
-                                name='city'
-                                value={inputData.city}
-                                onChange={(e) => {
-                                    setinputData({ ...inputData, city: e.target.value })
-                                }} />
-                            <p className='text-danger'>{formErrors.city}</p>
-                        </Form.Group>
+        <Card className='container w-100'>
+            <h3 className='container '>Correspondance Address
+            </h3>
+            <div className='d-flex justify-content-end'>
+                <Button className='btn btn-dark' onClick={handleSubmit}>Submit</Button>
 
-                        <Form.Group as={Col} controlId="formGridState" className='item'>
-                            <Form.Label>State</Form.Label>
-                            <Form.Control type="text" placeholder="State"
-                                name='state'
-                                value={inputData.state}
-                                onChange={(e) => {
-                                    setinputData({ ...inputData, state: e.target.value })
-                                }} />
-                            <p className='text-danger'>{formErrors.state}</p>
-                        </Form.Group>
+            </div>
+            <Row className="corrAdd">
+                <Form.Group as={Col} controlId="formGridCity" className='item'>
+                    <Form.Label>Address 1</Form.Label>
+                    <Form.Control type="text" placeholder="address"
+                        name='address'
+                        value={inputData.add1}
+                        onChange={(e) => {
+                            setinputData({ ...inputData, add1: e.target.value })
+                        }}
+                    />
+                    <p className='text-danger'>{formErrors.add1}</p>
+                </Form.Group>
+                <Form.Group as={Col} controlId="formGridCity" className='item'>
+                    <Form.Label>Address 2</Form.Label>
+                    <Form.Control type="text" placeholder="address"
+                        name='address'
+                        value={inputData.add2}
+                        onChange={(e) => {
+                            setinputData({ ...inputData, add2: e.target.value })
+                        }} />
+                    <p className='text-danger'>{formErrors.add2}</p>
+                </Form.Group>
+                <Form.Group as={Col} controlId="formGridCity" className='item'>
+                    <Form.Label>City</Form.Label>
+                    <Form.Control type="text" placeholder="City"
+                        name='city'
+                        value={inputData.city}
+                        onChange={(e) => {
+                            setinputData({ ...inputData, city: e.target.value })
+                        }} />
+                    <p className='text-danger'>{formErrors.city}</p>
+                </Form.Group>
 
-                        <Form.Group as={Col} controlId="formGridZip" className='item'>
-                            <Form.Label>Zip</Form.Label>
-                            <Form.Control type="number" placeholder="zip"
-                                name='zip'
-                                value={inputData.zip}
-                                onChange={(e) => {
-                                    setinputData({ ...inputData, zip: e.target.value })
-                                }} />
-                            <p className='text-danger'>{formErrors.zip}</p>
-                        </Form.Group>
-                    </Row>
+                <Form.Group as={Col} controlId="formGridState" className='item'>
+                    <Form.Label>State</Form.Label>
+                    <Form.Control type="text" placeholder="State"
+                        name='state'
+                        value={inputData.state}
+                        onChange={(e) => {
+                            setinputData({ ...inputData, state: e.target.value })
+                        }} />
+                    <p className='text-danger'>{formErrors.state}</p>
+                </Form.Group>
 
-            </Card>
+                <Form.Group as={Col} controlId="formGridZip" className='item'>
+                    <Form.Label>Zip</Form.Label>
+                    <Form.Control type="number" placeholder="zip"
+                        name='zip'
+                        value={inputData.zip}
+                        onChange={(e) => {
+                            setinputData({ ...inputData, zip: e.target.value })
+                        }} />
+                    <p className='text-danger'>{formErrors.zip}</p>
+                </Form.Group>
+            </Row>
+
+        </Card>
     )
 }
 

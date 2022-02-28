@@ -9,7 +9,6 @@ import CustomerListPage from './components/customerListPage/CustomerListPage';
 import AgencyOrBrokerPage from './components/agencyOrBrokerPage/AgencyOrBrokerPage';
 import BrokerBussinessPage from './components/brokerBussinessPage/BrokerBussinessPage';
 import MainNavigationPage from './components/mainNavigationPage/MainNavigationPage';
-import CreateAccount from './components/loginPage/CreateAccount';
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
         <Route exact path='/' component={Loginpage} />
 
         <Route path='/mainNavigationPage' component={MainNavigationPage} />
-        <Route path='/createaccount' component={CreateAccount} />
         <Route path='/mainNavigationPage/profilePageUser' component={ProfileUserPage} />
         <Route path='/mainNavigationPage/profilePageCompany' component={ProfileCompanyPage} />
         <Route path='/mainNavigationPage/customerListPage' component={CustomerListPage} />
